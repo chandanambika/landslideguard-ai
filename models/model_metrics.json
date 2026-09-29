@@ -1,0 +1,59 @@
+{
+  "dataset_records": 1500,
+  "train_samples": 1200,
+  "test_samples": 300,
+  "feature_count": 26,
+  "features": [
+    "latitude",
+    "longitude",
+    "rainfall_24h",
+    "rainfall_7d",
+    "rainfall_intensity",
+    "temperature",
+    "humidity",
+    "elevation",
+    "slope",
+    "aspect",
+    "terrain_roughness",
+    "curvature",
+    "ndvi",
+    "ndwi",
+    "soil_moisture",
+    "vegetation_index",
+    "historical_landslides",
+    "previous_landslide",
+    "rainfall_pressure",
+    "rainfall_accumulation",
+    "rainfall_intensity_score",
+    "slope_risk",
+    "soil_moisture_risk",
+    "terrain_instability",
+    "vegetation_stability",
+    "historical_risk"
+  ],
+  "models": {
+    "logistic_regression": {
+      "accuracy": 0.91,
+      "precision": 0.9534,
+      "recall": 0.9109,
+      "f1_score": 0.9316,
+      "roc_auc": 0.9645
+    },
+    "random_forest": {
+      "accuracy": 0.8733,
+      "precision": 0.91,
+      "recall": 0.901,
+      "f1_score": 0.9055,
+      "roc_auc": 0.939
+    },
+    "xgboost": {
+      "accuracy": 0.8633,
+      "precision": 0.9128,
+      "recall": 0.8812,
+      "f1_score": 0.8967,
+      "roc_auc": 0.9335
+    }
+  },
+  "primary_model": "xgboost",
+  "fallback_model": "random_forest"
+}
